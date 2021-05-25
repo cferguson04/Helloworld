@@ -21,11 +21,11 @@ pipelines:
           type: success
           allow_only_on_success: false
         jobs:
+          artifacts:
+          - build:
+            source: ./*.nupkg
           Build:
             timeout: 0
-            artifacts:
-              - build:
-                source: ./*.nupkg
             tasks:
             - exec:
                 arguments:
