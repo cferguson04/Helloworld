@@ -25,7 +25,7 @@ pipelines:
             timeout: 0
             artifacts:
               - build:
-                source: .\*.nupkg
+                source: ./*.nupkg
             tasks:
             - exec:
                 arguments:
@@ -39,6 +39,6 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - pack -o .\
+                - pack -o ./
                 command: dotnet
                 run_if: passed
