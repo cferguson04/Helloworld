@@ -39,6 +39,6 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - pack -o ./
+                - "pack -o ./"
                 command: dotnet
                 run_if: passed
