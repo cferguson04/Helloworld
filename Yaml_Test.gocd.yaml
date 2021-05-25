@@ -16,13 +16,17 @@ pipelines:
     - Build:
         fetch_materials: true
         keep_artifacts: false
-        clean_workspace: false
+        clean_workspace: true
         approval:
           type: success
           allow_only_on_success: false
         jobs:
           Build:
             timeout: 0
+            artifacts:
+              - build:
+                source: .\HelloWorld\bin\Debug\HelloWorld.1.0.0.nupkg
+                destination: binaries
             tasks:
             - exec:
                 arguments:
