@@ -23,9 +23,9 @@ pipelines:
         jobs:
           Build:
             timeout: 0
-            artifacts:
-              - build:
-                source: .\HelloWorld\bin\Debug\HelloWorld.1.0.0.nupkg
+            #artifacts:
+            #  - build:
+            #    source: .\HelloWorld\bin\Debug\HelloWorld.1.0.0.nupkg
             tasks:
             - exec:
                 arguments:
