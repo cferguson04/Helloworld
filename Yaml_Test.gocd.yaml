@@ -34,3 +34,7 @@ pipelines:
                 - build
                 command: dotnet
                 run_if: passed
+            - exec:
+                arguements:
+                - pack
+                command: dotnet
