@@ -26,7 +26,6 @@ pipelines:
             artifacts:
               - build:
                 source: .\HelloWorld\bin\Debug\HelloWorld.1.0.0.nupkg
-                destination: binaries
             tasks:
             - exec:
                 arguments:
